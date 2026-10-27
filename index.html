@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>LINE写真 撮影日時書き込み</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">LINE写真 撮影日時書き込み</h1>
+
+      <form id="form" class="form" novalidate>
+        <div class="field">
+          <label class="label" for="dates">日時テキスト</label>
+          <input class="file-input" id="dates" type="file" accept=".txt,text/plain" />
+          <p class="hint" id="dates-info"></p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="photos">写真（JPEG）</label>
+          <input class="file-input" id="photos" type="file" accept="image/jpeg" multiple />
+          <p class="hint" id="photos-info"></p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="offset">タイムゾーン（UTCからの時差）</label>
+          <input
+            class="text-input"
+            id="offset"
+            type="text"
+            inputmode="text"
+            autocomplete="off"
+            spellcheck="false"
+            pattern="[+\-](0\d|1[0-4]):[0-5]\d"
+            placeholder="+09:00"
+          />
+        </div>
+
+        <button class="button" id="run" type="submit" disabled>実行</button>
+      </form>
+
+      <div id="status" class="status" role="status" hidden></div>
+      <div id="error" class="status status-error" role="alert" hidden></div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

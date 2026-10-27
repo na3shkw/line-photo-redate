@@ -1,0 +1,22 @@
+{
+  "name": "line-photo-redate",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@digital-go-jp/design-tokens": "^2.1.0",
+    "fflate": "^0.8.3"
+  },
+  "devDependencies": {
+    "exifr": "^7.1.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}
